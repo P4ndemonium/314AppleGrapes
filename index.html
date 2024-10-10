@@ -1,10 +1,122 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+      <title>Login Page</title>
+      <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <p>hi</p>
+      <div class="main">
+            <h1>Welcome to AppleGrapes Car Listing</h1>
+            <h3>Enter your login credentials</h3>
+            <form action="">
+                  <label for="first">
+                        Username:
+                  </label>
+                  <input type="text" 
+                         id="first" 
+                         name="first" 
+                         placeholder="Enter your Username" required>
+
+                  <label for="password">
+                        Password:
+                  </label>
+                  <input type="password"
+                         id="password" 
+                         name="password"
+                         placeholder="Enter your Password" required>
+
+                         <div class="user-profile">
+                            <label for="user-profile" class="profile-label">
+                                User Profile:
+                            </label>
+                            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#buyer">Buyer</a>
+                                <a href="#seller">Seller</a>
+                                <a href="#caragent">Car Agent</a>
+                                <a href="#admin">Admin</a>
+                            </div>
+                        </div>
+                        
+                        <style>
+                            .dropbtn {
+                                background-color: #3498DB;
+                                color: white;
+                                padding: 16px;
+                                font-size: 16px;
+                                border: none;
+                                cursor: pointer;
+                            }
+                            
+                            .dropbtn:hover, .dropbtn:focus {
+                                background-color: #2980B9;
+                            }
+                            
+                            .user-profile {
+                                display: flex;
+                                align-items: center;
+                            }
+                        
+                            .profile-label {
+                                margin-right: 10px; /* Adjusts spacing between label and button */
+                            }
+                            
+                            .dropdown {
+                                position: relative;
+                                display: inline-block;
+                            }
+                            
+                            .dropdown-content {
+                                display: none;
+                                position: absolute;
+                                background-color: #f1f1f1;
+                                min-width: 100px;
+                                overflow: auto;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                z-index: 1;
+                            }
+                            
+                            .dropdown-content a {
+                                color: black;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                            }
+                            
+                            .dropdown a:hover {background-color: #ddd;}
+                            
+                            .show {display: block;}
+                        </style>
+                        
+                        <script>
+                            function myFunction() {
+                                document.getElementById("myDropdown").classList.toggle("show");
+                            }
+                        
+                            window.onclick = function(event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    for (var i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
+                        
+
+                  <div class="wrap">
+                        <button type="loginbtn"
+                                onclick="solve()">
+                              Login
+                        </button>
+                  </div>
+            </form>
+      </div>
 </body>
+
 </html>
